@@ -20,6 +20,24 @@ Desenvolvido como solução para o desafio técnico de **Processamento Paralelo 
 - unittest
 
 ---
+##  Fluxograma do Projeto
+
+```mermaid
+flowchart TD
+    A[Início] --> B[Producer envia mensagens para o tópico Kafka 'sales']
+    B --> C[Consumer lê mensagens do Kafka em lotes de 100]
+    C --> D[Processamento paralelo com ThreadPoolExecutor]
+    D --> E[Para cada mensagem válida: calcular total do pedido]
+    E --> F[Inserir dados no banco PostgreSQL - tabela sales]
+    F --> G{Conexão com banco bem-sucedida?}
+    G -- Sim --> H[Confirma gravação e segue processamento]
+    G -- Não --> I[Retry até 5 vezes]
+    I --> J{Conexão recuperada?}
+    J -- Sim --> H
+    J -- Não --> K[Interrompe o processo]
+    H --> L[Fim do lote]
+    L --> C
+```
 
 
 ##  Configuração do Ambiente
