@@ -109,9 +109,9 @@ python src/main.py
 - Cada lote contém 100 mensagens.
 - O paralelismo é feito dentro de cada lote para melhorar a eficiência do processamento.
 
-                                     ![alt text](image.png)
+                                     
 ---
-
+![alt text](image.png)
 ##  Tratamento de Erros
 
 - Mensagens malformadas são registradas em log e ignoradas.
