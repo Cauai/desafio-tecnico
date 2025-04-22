@@ -5,8 +5,7 @@
 
 Processamento em tempo real de vendas capturadas através de um tópico Kafka, cálculo do valor total de cada pedido, e armazenamento dos dados em um banco relacional PostgreSQL.
 
-Desenvolvido como solução para o desafio técnico de **Processamento Paralelo de Vendas em Tempo Real com Python, Kafka e Banco Relacional*
-*.
+Desenvolvido como solução para o desafio técnico de **Processamento Paralelo de Vendas em Tempo Real com Python, Kafka e Banco Relacional**.
 
 ---
 
@@ -111,7 +110,7 @@ python src/main.py
 
                                      
 ---
-![alt text](image.png)
+
 ##  Tratamento de Erros
 
 - Mensagens malformadas são registradas em log e ignoradas.
@@ -145,7 +144,7 @@ A escolha se deu porque:
 - **Escalabilidade**: Aumentar o número de workers (threads) é simples, permitindo otimizar o desempenho em cenários de alta carga.
 
 Essa abordagem é eficiente e adequada para o contexto do desafio, onde o gargalo principal não é CPU-bound e sim o tempo de resposta dos sistemas externos (Kafka e Banco de Dados).
-
+![alt text](image-1.png)
 
 #  Entregáveis
 
