@@ -2,7 +2,7 @@ import unittest
 from src.processor import process_message
 from datetime import datetime, timezone
 
-processed_at = datetime.now(timezone.utc)
+
 
 class TestProcessor(unittest.TestCase):
 
