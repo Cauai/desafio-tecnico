@@ -1,4 +1,10 @@
 
+![download](https://github.com/user-attachments/assets/4f4d0dec-c9ed-4b53-8faa-fa9a2cd1642a)            ![download](https://github.com/user-attachments/assets/03f2a8ec-618a-4cc5-a8db-218307ea26fa)                  ![download](https://github.com/user-attachments/assets/79d431c1-addb-4f05-acbb-7ad4f36395c1)
+
+
+
+
+
 #  Projeto: Processamento Paralelo de Vendas em Tempo Real
 
 ##  Contexto
