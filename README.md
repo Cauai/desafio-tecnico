@@ -65,7 +65,9 @@ docker-compose up -d
 
 ---
 
-## 📜 Criação da Tabela `sales`
+##  Criação da Tabela `sales`
+
+Para fins de testes foi utilizado o DBeaver para executar a criação da tabelas "Sales".
 
 ```sql
 CREATE TABLE sales (
@@ -107,6 +109,7 @@ python src/main.py
 - Cada lote contém 100 mensagens.
 - O paralelismo é feito dentro de cada lote para melhorar a eficiência do processamento.
 
+                                     ![alt text](image.png)
 ---
 
 ##  Tratamento de Erros
