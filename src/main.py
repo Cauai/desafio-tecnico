@@ -12,6 +12,7 @@ def main():
         batch.append(msg.value)
         if len(batch) == 100:
             try:
+                print(f"Processando batch de {len(batch)} mensagens...")
                 process_batch(batch, db_conn)
             except OperationalError:
                 print("Erro de conexão, tentando reconectar...")
