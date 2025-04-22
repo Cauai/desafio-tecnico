@@ -1,10 +1,11 @@
 import unittest
 from src.processor import process_message
+from datetime import datetime
 
 class TestProcessor(unittest.TestCase):
 
     def test_process_message_success(self):
-        # Mock de uma mensagem de venda
+        # Mock de uma mensagem de venda válida
         message = {
             "order_number": 123,
             "order_items": [
@@ -18,18 +19,17 @@ class TestProcessor(unittest.TestCase):
         # Verifica se o resultado não é None
         self.assertIsNotNone(result)
 
-        # Verifica se o order_number bate
+        # Verifica se o order_number está correto
         self.assertEqual(result[0], 123)
 
-        # Verifica se o total está correto (2*50 + 1*100 = 200)
+        # Verifica se o total calculado está correto (2*50 + 1*100 = 200)
         self.assertEqual(result[1], 200.0)
 
-        # Verifica se o processed_at é do tipo datetime
-        from datetime import datetime
+        # Verifica se o processed_at é uma instância de datetime
         self.assertIsInstance(result[2], datetime)
 
     def test_process_message_invalid(self):
-        # Mensagem inválida (faltando campos)
+        # Mensagem inválida (faltando campos obrigatórios)
         message = {
             "wrong_field": "no_order_number"
         }
