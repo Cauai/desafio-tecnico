@@ -60,16 +60,24 @@ CREATE TABLE sales (
 
 ##  Execução do Projeto
 
-### 1. Iniciar o produtor de mensagens (mock)
+### 1. Iniciar o produtor de mensagens (mock).
 
 ```bash
-python src/producer.py
+.venv\Scripts\activate.bat 
 ```
 
-### 2. Iniciar o consumidor de mensagens
+```bash
+python src/kafka_producer_mock.py
+```
+
+### 2. Iniciar a Aplicação.
 
 ```bash
-python src/consumer.py
+.venv\Scripts\activate.bat 
+```
+
+```bash
+python src/main.py
 ```
 
 ---
