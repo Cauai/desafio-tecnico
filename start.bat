@@ -1,6 +1,10 @@
 @echo off
 setlocal
 
+echo ================================
+echo Iniciando o setup do projeto...
+echo ================================
+
 REM Caminho fixo do seu Python
 set "PYTHON_EXE=C:\Users\cauai\AppData\Local\Programs\Python\Python313\python.exe"
 
@@ -17,9 +21,14 @@ echo Instalando dependencias...
 call .venv\Scripts\activate
 pip install -r requirements.txt
 
-REM 3. Executa o script principal
-echo Iniciando consumidor Kafka...
-python main.py
+REM 3. Executa o docker compose
+echo Executando Docker...
+docker-compose up
+
+REM 4. Mensagem final de sucesso
+echo ================================
+echo Projeto executado com sucesso! ✅
+echo ================================
 
 endlocal
 pause
