@@ -25,7 +25,11 @@ REM 3. Executa o docker compose
 echo Executando Docker...
 docker-compose up
 
-REM 4. Mensagem final de sucesso
+REM 4. Executa o kafka producer
+echo Executando Docker...
+python src/kafka_producer_mock.py
+
+REM 5. Mensagem final de sucesso
 echo ================================
 echo Projeto executado com sucesso! ✅
 echo ================================
