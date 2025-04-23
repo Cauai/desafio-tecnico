@@ -43,14 +43,35 @@ flowchart TD
 
 ### 1. Instalar dependências
 
+Inicialize o arquivo start.bat, nele será realizado algumas configurações como a criação do ambiente,docker-compose.
+Lembre de alterar o PATH:
+
 ```bash
-pip install -r requirements.txt
+REM Caminho fixo do seu Python
+set "PYTHON_EXE={Coloque o PATH do seu Python neste trecho.}"```
 ```
 
-### 2. Subir o ambiente com Docker
+```bash
+start.bat
+```
+
+### 2. Executar o Kafka producer & Kafka Consumer
+
 
 ```bash
-docker-compose up -d
+.venv\Scripts\activate.bat
+```
+
+```bash
+python src/kafka_producer_mock.py
+```
+
+```bash
+.venv\Scripts\activate.bat
+```
+
+```bash
+python src/main.py
 ```
 
 ### 3. Configurar variáveis de ambiente
@@ -61,6 +82,7 @@ docker-compose up -d
 - DB_NAME
 - DB_USER
 - DB_PASS
+- PYTHON_EXE
 
 ---
 
@@ -79,26 +101,6 @@ CREATE TABLE sales (
 ---
 
 ##  Execução do Projeto
-
-### 1. Iniciar o produtor de mensagens (mock).
-
-```bash
-.venv\Scripts\activate.bat 
-```
-
-```bash
-python src/kafka_producer_mock.py
-```
-
-### 2. Iniciar a Aplicação.
-
-```bash
-.venv\Scripts\activate.bat 
-```
-
-```bash
-python src/main.py
-```
 
 ---
 
@@ -144,7 +146,7 @@ A escolha se deu porque:
 - **Escalabilidade**: Aumentar o número de workers (threads) é simples, permitindo otimizar o desempenho em cenários de alta carga.
 
 Essa abordagem é eficiente e adequada para o contexto do desafio, onde o gargalo principal não é CPU-bound e sim o tempo de resposta dos sistemas externos (Kafka e Banco de Dados).
-                    ![alt text](image-1.png)
+                    
 
 #  Entregáveis
 
