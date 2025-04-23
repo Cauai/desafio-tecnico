@@ -100,10 +100,6 @@ CREATE TABLE sales (
 
 ---
 
-##  Execução do Projeto
-
----
-
 ##  Paralelismo
 
 - Utilizado `ThreadPoolExecutor` para processamento paralelo das mensagens em lotes.
