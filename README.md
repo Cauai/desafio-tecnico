@@ -44,7 +44,8 @@ flowchart TD
 ### 1. Instalar dependências
 
 Inicialize o arquivo start.bat, nele será realizado algumas configurações como a criação do ambiente,docker-compose.
-Lembre de alterar o PATH:
+Execute os comandos com o 'Command Prompt'
+Lembre-de alterar o PATH:
 
 ```bash
 REM Caminho fixo do seu Python
